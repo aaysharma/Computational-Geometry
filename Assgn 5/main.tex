@@ -1,0 +1,53 @@
+\newcommand{\longversion}[1]{#1}
+
+%\documentclass[a4paper,10pt]{article}
+%\addtolength{\topmargin}{-.0875in}
+
+\documentclass[10pt,english]{article}
+
+\input{Sections/preamble.tex}
+
+\title{Computational Geometry Assignment 5}
+
+\author{Amatya Sharma \and Divyang Mittal}
+\begin{document}
+
+
+\begin{titlepage}
+	\centering
+	\vspace{4cm}
+	{\scshape\LARGE Computational Geometry \par}
+	\vspace{1cm}
+	{\scshape\Large Assignment 5\par}
+
+	\vfill
+	submitted by\par
+	Divyang Mittal (17CS10012) \par
+	Amatya Sharma (17CS30042)
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+
+\ifdefined\DEBUG
+% \input{Sections/instr}
+\fi 
+
+\input{Sections/5a}
+\newpage
+
+\input{Sections/5b}
+\newpage
+
+\input{Sections/5c}
+
+\bibliography{Sections/references}
+\bibliographystyle{alpha}
+\end{document}

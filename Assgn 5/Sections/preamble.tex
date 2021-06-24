@@ -1,0 +1,262 @@
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=Mahogany]{hyperref}
+\usepackage{makecell}
+\usepackage{multirow}
+% \usepackage{mathtools}
+% \usepackage{mathaccent}
+\usepackage{eulervm}
+\usepackage{graphicx}
+\usepackage{algorithm}	
+\usepackage{algorithmic}
+
+
+\usepackage{extsizes}
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=.25in,right=.25in,top=.25in,bottom=.25in,%
+            footskip=.25in]{geometry}
+\usepackage{blindtext}
+\usepackage{multicol}
+%overleaf
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{gensymb}
+
+\newcommand{\eqdef}{\overset{\mathrm{def}}{=\joinrel=}}
+% \newenvironment{proof}{\noindent{\em Proof:}}{ \hfill $\square$\\ }
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand{\pl}{{\bf pl}}
+
+%Color and Pictures
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\longversion{
+\usepackage{fullpage}
+\usepackage{charter,eulervm}
+}
+
+\sloppy
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+
+
+\newcommand{\defproblem}[3]{
+  \vspace{1mm}
+\begin{center}
+\noindent\fbox{
+
+  \begin{minipage}{\textwidth}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l} \textsc{\underline{#1}} \\ \end{tabular*}\vspace{1ex}
+  {\bf{Input:}} #2  \\
+  {\bf{Question:}} #3
+  \end{minipage}
+ 
+  }
+\end{center}
+  \vspace{1mm}
+}
+
+\newcommand{\defparproblem}[4]{
+  \vspace{1mm}
+\begin{center}
+\noindent\fbox{
+
+  \begin{minipage}{\textwidth}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr} \textsc{#1}  & {\bf{Parameter:}} #3 \\ \end{tabular*}
+  {\bf{Input:}} #2  \\
+  {\bf{Question:}} #4
+  \end{minipage}
+ 
+  }
+\end{center}
+  \vspace{1mm}
+}
+
+\newdimen\prevdp
+\def\leftlabel#1{\noalign{\prevdp=\prevdepth
+   \kern-\prevdp\nointerlineskip\vbox to0pt{\vss\hbox{\ensuremath{#1}}}\kern\prevdp}}
+
+%A useful package if you write url addresses:
+\usepackage{url}
+
+\renewcommand{\labelitemi}{$\vartriangleright$}
+
+\newcommand{\SB}{\mathbb{S}}
+
+\usepackage{enumerate}
+
+\usepackage{xspace}
+\newcommand{\NP}{\ensuremath{\mathsf{NP}}\xspace}
+\newcommand{\NPC}{\ensuremath{\mathsf{NP}}\text{-complete}\xspace}
+\newcommand{\NPH}{\ensuremath{\mathsf{NP}}\text{-hard}\xspace}
+\newcommand{\PNPH}{para-\ensuremath{\mathsf{NP}\text{-hard}}\xspace}
+\newcommand{\el}{\ensuremath{\ell}\xspace}
+\newcommand{\suc}{\ensuremath{\succ}\xspace}
+\newcommand{\sucb}{\ensuremath{\succ_{\text{best}}}\xspace}
+\newcommand{\sucw}{\ensuremath{\succ_{\text{worst}}}\xspace}
+\newcommand{\PNENP}{\ensuremath{\mathsf{P\ne NP}}\xspace}
+\newcommand{\WOH}{\ensuremath{\mathsf{W[1]}}-hard\xspace}
+\newcommand{\WOC}{\ensuremath{\mathsf{W[1]}}-complete\xspace}
+\newcommand{\FPT}{\ensuremath{\mathsf{FPT}}\xspace}
+\newcommand{\tsat}{\ensuremath{(3,\text{B}2)}-{\sc SAT}\xspace}
+\newcommand{\SAT}{\ensuremath{3}-{\sc SAT}\xspace}
+\newcommand{\XTC}{{\sc X3C}\xspace}
+\newcommand{\Pb}{\ensuremath{P}\xspace}
+\newcommand{\tvdp}{{\sc Two Vertex Disjoint Paths}\xspace}
+
+\let\oldlambda\lambda
+\renewcommand{\lambda}{\ensuremath{\oldlambda}\xspace}
+\let\oldalpha\alpha
+\renewcommand{\alpha}{\ensuremath{\oldalpha}\xspace}
+\let\oldDelta\Delta
+\renewcommand{\Delta}{\ensuremath{\oldDelta}\xspace}
+
+\newcommand{\YES}{{\sc yes}\xspace}
+\newcommand{\NO}{{\sc no}\xspace}
+\newcommand{\yes}{{\sc yes}\xspace}
+\newcommand{\no}{{\sc no}\xspace}
+\newcommand{\true}{\text{{\sc true}}\xspace}
+\newcommand{\false}{\text{{\sc false}}\xspace}
+
+\newcommand{\mov}{{\sc Margin of Victory}\xspace}
+
+
+\renewcommand{\AA}{\ensuremath{\mathcal A}\xspace}
+\newcommand{\BB}{\ensuremath{\mathcal B}\xspace}
+\newcommand{\CC}{\ensuremath{\mathcal C}\xspace}
+\newcommand{\DD}{\ensuremath{\mathcal D}\xspace}
+\newcommand{\EE}{\ensuremath{\mathcal E}\xspace}
+\newcommand{\FF}{\ensuremath{\mathcal F}\xspace}
+\newcommand{\GG}{\ensuremath{\mathcal G}\xspace}
+\newcommand{\HH}{\ensuremath{\mathcal H}\xspace}
+\newcommand{\II}{\ensuremath{\mathcal I}\xspace}
+\newcommand{\JJ}{\ensuremath{\mathcal J}\xspace}
+\newcommand{\KK}{\ensuremath{\mathcal K}\xspace}
+\newcommand{\LL}{\ensuremath{\mathcal L}\xspace}
+\newcommand{\MM}{\ensuremath{\mathcal M}\xspace}
+\newcommand{\NN}{\ensuremath{\mathcal N}\xspace}
+\newcommand{\OO}{\ensuremath{\mathcal O}\xspace}
+\newcommand{\PP}{\ensuremath{\mathcal P}\xspace}
+\newcommand{\QQ}{\ensuremath{\mathcal Q}\xspace}
+\newcommand{\RR}{\ensuremath{\mathcal R}\xspace}
+\renewcommand{\SS}{\ensuremath{\mathcal S}\xspace}
+\newcommand{\TT}{\ensuremath{\mathcal T}\xspace}
+\newcommand{\UU}{\ensuremath{\mathcal U}\xspace}
+\newcommand{\VV}{\ensuremath{\mathcal V}\xspace}
+\newcommand{\WW}{\ensuremath{\mathcal W}\xspace}
+\newcommand{\XX}{\ensuremath{\mathcal X}\xspace}
+\newcommand{\YY}{\ensuremath{\mathcal Y}\xspace}
+\newcommand{\ZZ}{\ensuremath{\mathcal Z}\xspace}
+
+
+\newcommand{\dmap}{\ensuremath{\delta\text{-}\mathcal MAP}\xspace}
+\newcommand{\est}{\ensuremath{\mathcal EST}\xspace}
+\newcommand{\ph}{\ensuremath{\mathcal PH}\xspace}
+
+
+\newcommand{\SSS}{\overline{\SS}\xspace}
+
+\newcommand{\MF}{\ensuremath{\mathfrak M}\xspace}
+\newcommand{\AF}{\ensuremath{\mathfrak A}\xspace}
+\newcommand{\GF}{\ensuremath{\mathfrak G}\xspace}
+\newcommand{\PF}{\ensuremath{\mathfrak P}\xspace}
+
+
+\newcommand{\ov}[1]{\ensuremath{\overline{#1}}}
+
+\newcommand{\aaa}{\ensuremath{\mathfrak a}\xspace}
+\newcommand{\bbb}{\ensuremath{\mathfrak b}\xspace}
+\newcommand{\ccc}{\ensuremath{\mathfrak c}\xspace}
+\newcommand{\ddd}{\ensuremath{\mathfrak d}\xspace}
+\newcommand{\eee}{\ensuremath{\mathfrak e}\xspace}
+\newcommand{\fff}{\ensuremath{\mathfrak f}\xspace}
+%\newcommand{\ggg}{\ensuremath{\mathfrak g}\xspace}
+%\newcommand{\hhh}{\ensuremath{\mathfrak h}\xspace}
+\newcommand{\iii}{\ensuremath{\mathfrak i}\xspace}
+\newcommand{\jjj}{\ensuremath{\mathfrak j}\xspace}
+\newcommand{\kkk}{\ensuremath{\mathfrak k}\xspace}
+%\newcommand{\lll}{\ensuremath{\mathfrak l}\xspace}
+\newcommand{\mmm}{\ensuremath{\mathfrak m}\xspace}
+\newcommand{\nnn}{\ensuremath{\mathfrak n}\xspace}
+\newcommand{\ooo}{\ensuremath{\mathfrak o}\xspace}
+\newcommand{\ppp}{\ensuremath{\mathfrak p}\xspace}
+\newcommand{\qqq}{\ensuremath{\mathfrak q}\xspace}
+\newcommand{\rrr}{\ensuremath{\mathfrak r}\xspace}
+\newcommand{\sss}{\ensuremath{\mathfrak s}\xspace}
+\newcommand{\ttt}{\ensuremath{\mathfrak t}\xspace}
+\newcommand{\uuu}{\ensuremath{\mathfrak u}\xspace}
+\newcommand{\vvv}{\ensuremath{\mathfrak v}\xspace}
+\newcommand{\www}{\ensuremath{\mathfrak w}\xspace}
+\newcommand{\xxx}{\ensuremath{\mathfrak x}\xspace}
+\newcommand{\yyy}{\ensuremath{\mathfrak y}\xspace}
+\newcommand{\zzz}{\ensuremath{\mathfrak z}\xspace}
+
+\newcommand{\EB}{\ensuremath{\mathbb E}\xspace}
+\newcommand{\NB}{\ensuremath{\mathbb N}\xspace}
+\newcommand{\RB}{\ensuremath{\mathbb R^+}\xspace}
+
+
+\usepackage{nicefrac}
+\newcommand{\ffrac}{\flatfrac}
+\newcommand{\nfrac}{\nicefrac}
+
+
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{observation}{\bf Observation}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{reductionrule}{\bf Reduction rule}
+
+
+\newcommand{\eps}{\ensuremath{\varepsilon}\xspace}
+\renewcommand{\epsilon}{\eps}
+
+\newcommand{\ignore}[1]{}
+
+\newcommand{\pr}{\ensuremath{\prime}}
+\newcommand{\prr}{\ensuremath{{\prime\prime}}}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\le}{\leqslant}
+
+% \usepackage{relsize}
+
+\newcommand{\greedy}{\textsc{Greedy committee}\xspace}
+
+\usepackage{cleveref}
+
+\crefname{theorem}{Theorem}{\bf Theorems}
+\crefname{observation}{Observation}{\bf Observations}
+\crefname{lemma}{Lemma}{\bf Lemmata}
+\crefname{corollary}{Corollary}{\bf Corollaries}
+\crefname{proposition}{Proposition}{\bf Propositions}
+\crefname{definition}{Definition}{\bf Definitions}
+\crefname{claim}{Claim}{\bf Claims}
+\crefname{reductionrule}{Reduction rule}{\bf Reduction rules}
+
+
+\def\DEBUG{true} % set this to be false to remove comments
+\ifdefined\DEBUG
+\newcommand{\aay}[1]{\textcolor{Red}{#1}}
+\newcommand{\damit}[1]{\textcolor{Green}{#1}}
+  \def\rem#1{{\marginpar{\raggedright\scriptsize #1}}}
+  \newcommand{\aayr}[1]{\rem{\textcolor{Red}{$\bullet$ #1}}}
+  \newcommand{\damitr}[1]{\rem{\textcolor{Green}{$\bullet$ #1}}}
+\else
+  \newcommand{\aay}[1]{#1}
+  \newcommand{\damit}[1]{#1}
+  \newcommand{\aayr}[1]{}
+  \newcommand{\damitr}[1]{}
+\fi
